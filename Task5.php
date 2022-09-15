@@ -19,6 +19,7 @@ class Task5
     {
         if (str_contains($n, 'E+')) {
             $chunks = preg_split('/E\+/', $n);
+
             return intval($chunks[1]) + 1;
         } else {
             return strlen($n - 2);

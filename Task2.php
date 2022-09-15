@@ -22,6 +22,7 @@ class Task2
     private static function countDays(string $date): string
     {
         $birthday = new DateTimeImmutable($date);
-        return $birthday->diff(new DateTimeImmutable())->format('%a day(s) remaining');
+
+        return $birthday->diff(new DateTimeImmutable())->format('%a');
     }
 }

@@ -51,7 +51,7 @@ class Task12
         return $this;
     }
 
-    public function substract(): object
+    public function subtract(): object
     {
         $this->result = $this->firstNumber - $this->secondNumber;
 
@@ -83,7 +83,7 @@ class Task12
         return $this;
     }
 
-    public function substractBy(int $number): object
+    public function subtractBy(int $number): object
     {
         $this->result -= $number;
 
@@ -99,7 +99,7 @@ class Task12
 
     public function divideBy(int $number): object
     {
-        if (!$this->secondNumber == 0) {
+        if (!$number == 0) {
             $this->result /= $number;
 
             return $this;

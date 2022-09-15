@@ -21,9 +21,7 @@ class Task8
 
     private static function decodeJson(string $json): string
     {
-        $elements = json_decode($json, true);
-
-        return self::parseElementsArray($elements);
+        return substr_replace(self::parseElementsArray(json_decode($json, true)), '', -1);
     }
 
     private static function parseElementsArray(array $elements): string

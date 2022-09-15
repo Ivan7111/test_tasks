@@ -67,9 +67,13 @@ class Task12
 
     public function divide(): object
     {
-        $this->result = $this->firstNumber / $this->secondNumber;
+        if (!$this->secondNumber == 0) {
+            $this->result = $this->firstNumber / $this->secondNumber;
 
-        return $this;
+            return $this;
+        } else {
+            throw new \InvalidArgumentException('Division by zero');
+        }
     }
 
     public function addBy(int $number): object
@@ -95,8 +99,12 @@ class Task12
 
     public function divideBy(int $number): object
     {
-        $this->result /= $number;
+        if (!$this->secondNumber == 0) {
+            $this->result /= $number;
 
-        return $this;
+            return $this;
+        } else {
+            throw new \InvalidArgumentException('Division by zero');
+        }
     }
 }
